@@ -18,6 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Routes for OAuth Service
+Route::middleware('guest')->group(function () {
+    // ...
+    Route::get('auth/{provider}/redirect', [SocialiteController::class, 'loginSocial'])
+        ->name('socialite.auth');
+ 
+    Route::get('auth/{provider}/callback', [SocialiteController::class, 'callbackSocial'])
+        ->name('socialite.callback');
+});
+// ...
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
