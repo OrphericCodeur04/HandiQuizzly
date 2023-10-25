@@ -15,4 +15,9 @@ class Question extends Model
         'answer_explanation',
         'more_info_link',
     ];
+
+    public function questionOptions(): HasMany
+    {
+        return $this->hasMany(QuestionOption::class)->inRandomOrder();
+    }
 }
