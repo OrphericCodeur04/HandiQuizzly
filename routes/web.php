@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\SocialiteController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Questions\QuestionList;
+use App\Livewire\Questions\QuestionForm;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,8 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('is_admin')->group(function () {
         Route::get('questions', QuestionList::class)->name('questions');
+        Route::get('questions/create', QuestionForm::class)->name('questions.create');
+        Route::get('questions/{question}', QuestionForm::class)->name('questions.edit');
     });
 
 });
