@@ -3,6 +3,7 @@
 namespace App\Livewire\Questions;
 
 use Livewire\Component;
+use Livewire\Redirector;
 use App\Models\Question;
 use Illuminate\Contracts\View\View;
 
