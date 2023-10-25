@@ -3,6 +3,8 @@
 namespace App\Livewire\Questions;
 
 use Livewire\Component;
+use App\Models\Question;
+use Illuminate\Contracts\View\View;
 
 class QuestionForm extends Component
 {
