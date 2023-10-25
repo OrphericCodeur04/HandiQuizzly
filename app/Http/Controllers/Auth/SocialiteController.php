@@ -12,8 +12,6 @@ use App\Providers\RouteServiceProvider;
 use Laravel\Socialite\Facades\Socialite;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-use Symfony\Component\HttpFoundation\RedirectResponse;
-
 class SocialiteController extends Controller
 {
     public function loginSocial(Request $request, string $provider): RedirectResponse
